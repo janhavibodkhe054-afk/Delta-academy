@@ -1,0 +1,107 @@
+import React from "react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-slate-950 text-slate-300">
+      
+      {/* TOP GRADIENT LINE */}
+      <div className="h-[2px] w-full bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-500" />
+
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        
+        {/* ABOUT */}
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-3">
+            <span className="text-sky-400">Δ</span> Delta Academy
+          </h2>
+          <p className="text-sm leading-relaxed text-slate-400">
+            <span className="font-semibold text-slate-200 block mb-2">
+              Excellence in Science & Competitive Exam Coaching
+            </span>
+            Nurturing scientific temperament and enabling aspirants to compete boldly.
+          </p>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div>
+          <h3 className="text-base font-semibold text-white mb-4">
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-sm">
+            {["Home", "About Us", "Gallery", "Program", "Results", "Admissions", "Contact"].map(
+              (item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="hover:text-sky-400 transition flex items-center gap-1"
+                  >
+                    <span className="text-sky-400">›</span> {item}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+
+        {/* PROGRAMS */}
+        <div>
+          <h3 className="text-base font-semibold text-white mb-4">
+            Programs
+          </h3>
+          <ul className="space-y-2 text-sm text-slate-400">
+            <li>Classes 11–12 (PCM / PCB)</li>
+            <li>Foundation (8–10)</li>
+            <li>JEE / NEET Coaching</li>
+            <li>Crash Courses</li>
+            <li>Olympiad Preparation</li>
+          </ul>
+        </div>
+
+        {/* CONTACT */}
+        <div>
+          <h3 className="text-base font-semibold text-white mb-4">
+            Contact Info
+          </h3>
+
+          <div className="space-y-2 text-sm text-slate-400 leading-relaxed">
+            <p>
+              📍 Shri Bhekrai Mata Madhyamik Vidyalaya Road,
+              Green Divine Society, Bhekrai Nagar,
+              Hadapsar, Pune – 412308
+            </p>
+
+            <p>📞 +91 93712 91136</p>
+            <p>☎️ +91 93712 91137</p>
+            <p>📧 info@deltaacademy.edu</p>
+            <p className="text-slate-500">🕒 Open 24 Hours</p>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="border-t border-slate-800 py-4 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+          
+          <p className="text-slate-500 text-center sm:text-left">
+            © 2024 Delta Education Academy. All rights reserved.
+          </p>
+
+          <div className="flex gap-5">
+            {["Terms & Conditions", "Privacy Policy", "Careers"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="hover:text-sky-400 transition"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
