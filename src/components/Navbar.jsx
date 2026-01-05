@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../assets/logo.png"; // <-- import your logo
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,26 +17,27 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
-      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
+    <nav className="fixed top-0 w-full bg-white shadow-sm z-50 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
 
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
+        {/* LOGO */}
+        <Link to="/" className="flex items-center gap-3 min-w-0">
           <img
-  src={logo}
-  alt="Delta Academy Logo"
-  className="w-12 h-12 object-contain rounded-xl shadow"
-/>
-
-          <div className="leading-tight">
-            <h1 className="text-xl font-extrabold text-gray-900">Delta Academy</h1>
-            <p className="text-xs uppercase tracking-widest text-gray-500">
+            src={logo}
+            alt="Delta Academy Logo"
+            className="w-11 h-11 object-contain rounded-xl shadow shrink-0"
+          />
+          <div className="leading-tight truncate">
+            <h1 className="text-lg sm:text-xl font-extrabold text-gray-900 truncate">
+              Delta Academy
+            </h1>
+            <p className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-500 truncate">
               Excellence in Education
             </p>
           </div>
         </Link>
 
-        {/* Desktop Links */}
+        {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center space-x-8 font-medium text-gray-700">
           {navItems.map((item, index) => (
             <NavLink
@@ -45,50 +46,52 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `relative py-1 transition-all ${
                   isActive
-                    ? "text-indigo-600 font-semibold after:content-[''] after:block after:w-full after:h-0.5 after:bg-indigo-600 after:rounded-full after:absolute after:bottom-0 after:left-0"
+                    ? "text-indigo-600 font-semibold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-indigo-600 after:rounded-full"
                     : "hover:text-indigo-600"
                 }`
               }
-              onClick={() => setIsOpen(false)}
             >
               {item.name}
             </NavLink>
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* DESKTOP CTA */}
         <Link
           to="/contact"
-          className="hidden md:inline-flex group relative items-center gap-2 px-7 py-3 rounded-full font-semibold text-gray-900
+          className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-gray-900
           bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-500
-          shadow hover:scale-105 transition-all duration-300"
+          shadow hover:scale-105 transition-transform duration-300"
         >
           🎯 Free Demo
         </Link>
 
-        {/* Mobile Hamburger */}
+        {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden text-2xl text-gray-700"
+          className="md:hidden text-3xl text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-white w-full transition-max-height duration-500 overflow-hidden ${
-          isOpen ? "max-h-screen" : "max-h-0"
+        className={`md:hidden bg-white transition-all duration-500 ease-in-out overflow-hidden ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col gap-4 px-6 py-4">
+        <ul className="flex flex-col gap-4 px-6 py-6">
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
-                  `block py-2 text-gray-700 font-medium transition-colors ${
-                    isActive ? "text-indigo-600 font-semibold" : "hover:text-indigo-600"
+                  `block py-2 text-base font-medium transition ${
+                    isActive
+                      ? "text-indigo-600 font-semibold"
+                      : "text-gray-700 hover:text-indigo-600"
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -97,11 +100,14 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
-          {/* Mobile CTA */}
-          <li>
+
+          {/* MOBILE CTA */}
+          <li className="pt-2">
             <Link
               to="/contact"
-              className="block text-center py-2 mt-2 bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-500 text-white rounded-full font-semibold hover:scale-105 transition-transform"
+              className="block text-center py-3 rounded-full font-semibold text-white
+              bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-500
+              shadow hover:scale-105 transition-transform"
               onClick={() => setIsOpen(false)}
             >
               🎯 Free Demo

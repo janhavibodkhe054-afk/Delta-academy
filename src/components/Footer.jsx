@@ -2,17 +2,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-slate-300">
+    <footer className="bg-slate-950 text-slate-300 overflow-x-hidden">
       
       {/* TOP GRADIENT LINE */}
       <div className="h-[2px] w-full bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-500" />
 
       {/* MAIN CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
         {/* ABOUT */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-3">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
             <span className="text-sky-400">Δ</span> Delta Academy
           </h2>
           <p className="text-sm leading-relaxed text-slate-400">
@@ -29,18 +30,25 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
-            {["Home", "About Us", "Gallery", "Program", "Results", "Admissions", "Contact"].map(
-              (item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="hover:text-sky-400 transition flex items-center gap-1"
-                  >
-                    <span className="text-sky-400">›</span> {item}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              "Home",
+              "About Us",
+              "Gallery",
+              "Program",
+              "Results",
+              "Admissions",
+              "Contact",
+            ].map((item) => (
+              <li key={item}>
+                <a
+                  href="#"
+                  className="hover:text-sky-400 transition flex items-center gap-2"
+                >
+                  <span className="text-sky-400">›</span>
+                  <span>{item}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -64,7 +72,7 @@ const Footer = () => {
             Contact Info
           </h3>
 
-          <div className="space-y-2 text-sm text-slate-400 leading-relaxed">
+          <div className="space-y-2 text-sm text-slate-400 leading-relaxed break-words">
             <p>
               📍 Shri Bhekrai Mata Madhyamik Vidyalaya Road,
               Green Divine Society, Bhekrai Nagar,
@@ -80,14 +88,15 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-slate-800 py-4 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-          
+      <div className="border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4
+          flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+
           <p className="text-slate-500 text-center sm:text-left">
             © 2024 Delta Education Academy. All rights reserved.
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {["Terms & Conditions", "Privacy Policy", "Careers"].map((item) => (
               <a
                 key={item}
