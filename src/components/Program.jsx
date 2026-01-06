@@ -105,7 +105,7 @@ const Program = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Delta <span className="text-indigo-600">Academy</span> Programs
+          Delta <span className="text-indigo-600">Education Academy</span> Programs
         </motion.h1>
       </div>
 

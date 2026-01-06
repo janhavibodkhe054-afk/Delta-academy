@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import about1 from "../assets/logo.png";
+import about1 from "../assets/logo2.png";
 
 /* ================= DATA ================= */
 const steps = [

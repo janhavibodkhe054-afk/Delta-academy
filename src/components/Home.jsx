@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import home1 from "../assets/image24.jpeg";
+import home1 from "../assets/logo2.png";
 import home2 from "../assets/image21.jpeg";
 
 export default function Home() {
@@ -20,12 +20,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-xs uppercase tracking-[0.3em] text-indigo-600 font-semibold mb-4">
-              Delta Academy
+              Delta Education Academy
             </p>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
               Shape Your Future <br />
-              <span className="text-indigo-600">with Delta Academy</span>
+              <span className="text-indigo-600">with Delta Education Academy</span>
             </h1>
 
             <p className="mt-4 text-lg font-medium text-gray-700">
@@ -142,7 +142,7 @@ export default function Home() {
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16">
-            Why Choose Delta Academy?
+            Why Choose Delta Education Academy?
           </h2>
 
           {/* Content Grid */}
@@ -201,7 +201,7 @@ export default function Home() {
           className="relative z-10 max-w-3xl text-center px-4 sm:px-6 text-white"
         >
           <p className="text-sm sm:text-base uppercase tracking-widest text-indigo-300 mb-4">
-            Welcome to Delta Academy
+            Welcome to Delta Education Academy
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
@@ -210,7 +210,7 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
-            Delta Academy provides expert coaching for Classes 8–12 and competitive exams like JEE, NEET, and MHT-CET with personalized mentoring and proven results.
+            Delta Education Academy provides expert coaching for Classes 8–12 and competitive exams like JEE, NEET, and MHT-CET with personalized mentoring and proven results.
           </p>
 
           <Link
@@ -236,7 +236,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <p className="text-sm uppercase tracking-widest text-indigo-600 mb-4">
-              About Delta Academy
+              About Delta Education Academy
             </p>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-gray-900">
@@ -249,7 +249,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-gray-600 leading-relaxed max-w-xl text-base sm:text-lg">
-              With expert faculty, small batch sizes, and a student-centric approach, Delta Academy ensures personalized attention and consistent performance improvement.
+              With expert faculty, small batch sizes, and a student-centric approach, Delta Education Academy ensures personalized attention and consistent performance improvement.
             </p>
           </motion.div>
 

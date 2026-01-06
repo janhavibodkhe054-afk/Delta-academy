@@ -35,7 +35,7 @@ const Admission = () => {
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h1 className="text-4xl font-bold mb-2">Admissions</h1>
         <p className="mb-12 text-gray-600">
-          Join the Delta Academy family - Your journey to success starts here
+          Join the Delta Education Academy family - Your journey to success starts here
         </p>
 
         {/* Steps Card */}

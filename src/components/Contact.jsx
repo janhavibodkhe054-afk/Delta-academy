@@ -49,7 +49,7 @@ const Contact = () => {
       {/* HEADER */}
       <div className="max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
-          Get in Touch with Delta Academy
+          Get in Touch with Delta Education Academy
         </h1>
         <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
           Have questions about courses, admissions, or guidance?

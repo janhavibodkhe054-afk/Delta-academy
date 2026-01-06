@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -14,7 +16,7 @@ const Footer = () => {
         {/* ABOUT */}
         <div>
           <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">
-            <span className="text-sky-400">Δ</span> Delta Academy
+            <span className="text-sky-400"></span> Delta Education Academy
           </h2>
           <p className="text-sm leading-relaxed text-slate-400">
             <span className="font-semibold text-slate-200 block mb-2">
@@ -30,26 +32,27 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
-            {[
-              "Home",
-              "About Us",
-              "Gallery",
-              "Program",
-              "Results",
-              "Admissions",
-              "Contact",
-            ].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
-                  className="hover:text-sky-400 transition flex items-center gap-2"
-                >
-                  <span className="text-sky-400">›</span>
-                  <span>{item}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+  {[
+    { name: "Home", to: "/" },
+    { name: "About Us", to: "/about" },
+    { name: "Gallery", to: "/gallery" },
+    { name: "Program", to: "/program" },
+    { name: "Results", to: "/result" },
+    { name: "Admissions", to: "/admission" },
+    { name: "Contact", to: "/contact" },
+  ].map((item) => (
+    <li key={item.name}>
+      <Link
+        to={item.to}
+        className="hover:text-sky-400 transition flex items-center gap-2"
+      >
+        <span className="text-sky-400">›</span>
+        <span>{item.name}</span>
+      </Link>
+    </li>
+  ))}
+</ul>
+
         </div>
 
         {/* PROGRAMS */}
@@ -57,13 +60,34 @@ const Footer = () => {
           <h3 className="text-base font-semibold text-white mb-4">
             Programs
           </h3>
-          <ul className="space-y-2 text-sm text-slate-400">
-            <li>Classes 11–12 (PCM / PCB)</li>
-            <li>Foundation (8–10)</li>
-            <li>JEE / NEET Coaching</li>
-            <li>Crash Courses</li>
-            <li>Olympiad Preparation</li>
-          </ul>
+         <ul className="space-y-2 text-sm text-slate-400">
+  <li>
+    <a href="/program" className="hover:text-white transition">
+      Classes 11–12 (PCM / PCB)
+    </a>
+  </li>
+  <li>
+    <a href="/program" className="hover:text-white transition">
+      Foundation (8–10)
+    </a>
+  </li>
+  <li>
+    <a href="/program" className="hover:text-white transition">
+      JEE / NEET Coaching
+    </a>
+  </li>
+  <li>
+    <a href="/program" className="hover:text-white transition">
+      Crash Courses
+    </a>
+  </li>
+  <li>
+    <a href="/program" className="hover:text-white transition">
+      Olympiad Preparation
+    </a>
+  </li>
+</ul>
+
         </div>
 
         {/* CONTACT */}
@@ -96,17 +120,7 @@ const Footer = () => {
             © 2024 Delta Education Academy. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-5">
-            {["Terms & Conditions", "Privacy Policy", "Careers"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="hover:text-sky-400 transition"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+          
         </div>
       </div>
     </footer>
